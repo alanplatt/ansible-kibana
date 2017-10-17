@@ -4,6 +4,7 @@ chroot="{{ kibana_chroot_path }}"
 chdir="{{ kibana_chdir }}"
 nice="{{ kibana_nice }}"
 
+NODE_OPTIONS="--max-old-space-size={{ kibana_max_old_space_size }}"
 
 {% if kibana_major_version >= 5 %}
 # If this is set to 1, then when `stop` is called, if the process has

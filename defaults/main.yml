@@ -12,6 +12,7 @@ kibana_log_dir:     /var/log/kibana
 kibana_install_dir: /opt/kibana         # v4.x and earlier only
 kibana_pid_dir:     /var/run/kibana
 kibana_pid_file: "{{ kibana_pid_dir }}/kibana.pid"
+kibana_max_old_space_size: "512"
 
 
 ############
@@ -39,8 +40,8 @@ kibana_index: ".kibana"
 kibana_defaultAppId: "discover"
 kibana_server_port: 5601
 kibana_server_host: "0.0.0.0"
-kibana_server_basePath: "" 
-kibana_server_maxPayloadBytes: 1048576 
+kibana_server_basePath: ""
+kibana_server_maxPayloadBytes: 1048576
 kibana_server_ssl_cert:                         # When required to enable SSL. /path/to/your/server.crt
 kibana_server_ssl_key:                          # When required to enable SSL. /path/to/your/server.key
 
